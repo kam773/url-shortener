@@ -1,0 +1,12 @@
+.wrapInput {
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}
+
+.error::placeholder {
+  color: red;
+}

@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 3rem 7.5rem;
+  height: 80vh;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.containerImage {
+  position: relative;
+  left: 15%;
+  top: 10%;
+  flex: 2.5;
+}
+
+.headingPrimary {
+  font-size: 8rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.headerText {
+  font-size: 2rem;
+}
+
+.containerText {
+  flex: 1.5;
+}
+
+.ctaBtn {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 3rem;
+  transition: all 0.3s;
+}
+
+.ctaBtn:hover {
+  background-color: #e58000;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 375px) {
+  .headerContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .containerText {
+    flex: 1;
+    text-align: center;
+    padding: 7rem 0;
+  }
+
+  .containerText > * {
+    padding: 1rem 0;
+  }
+
+  .containerImage {
+    position: relative;
+    left: 25%;
+    top: 10%;
+    flex: 1;
+  }
+  .headingPrimary {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1.5rem;
+    height: auto;
+  }
+}

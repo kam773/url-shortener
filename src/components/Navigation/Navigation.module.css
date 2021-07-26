@@ -1,0 +1,121 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenu {
+  list-style-type: none;
+  position: absolute;
+  top: 15%;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 0.8rem;
+  z-index: 99;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mobileNav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.menuToggle {
+  cursor: pointer;
+  font-size: 2rem;
+  color: hsl(257, 7%, 63%);
+}
+
+.menuLink {
+  padding: 0.5rem 1.5rem;
+}
+
+.logo {
+  padding-right: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.mobileLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.wrapSeparator {
+  display: flex;
+  justify-content: center;
+}
+
+.separator {
+  border-bottom: 1px solid hsl(257, 7%, 63%);
+  height: 1px;
+  width: 22rem;
+}
+
+.mobileWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.mobileMenu li:last-of-type {
+  padding-bottom: 2.5rem;
+}
+
+.mobileListItem {
+  padding: 1.5rem 10rem;
+}
+
+.btnRound {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 3rem;
+  transition: all 0.3s;
+}
+
+.btnRound:hover {
+  background-color: #e58000;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 375px) {
+  .navigation {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnRound {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 3rem;
+  }
+}

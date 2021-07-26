@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 375px) {
+  .form {
+    flex-direction: column;
+    width: auto;
+  }
+}

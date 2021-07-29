@@ -40,9 +40,9 @@ const MainSection: React.FC<MainSectionProps> = () => {
         ...shortenedLinks,
         { short_link, original_link, copied: false },
       ];
-      LocalStorageService.setItem("links", JSON.stringify(updatedLinks));
       setShortenedLinks(updatedLinks);
-      setUrl("");
+      setUrl("");      
+      LocalStorageService.setItem("links", JSON.stringify(updatedLinks));
     } else {
       setError("Please add a valid link");
     }

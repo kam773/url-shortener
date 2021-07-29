@@ -1,9 +1,5 @@
 import * as React from "react";
 import logo from "../../assets/logo.svg";
-import facebook from "../../assets/icon-facebook.svg";
-import twitter from "../../assets/icon-twitter.svg";
-import instagram from "../../assets/icon-instagram.svg";
-import pinterest from "../../assets/icon-pinterest.svg";
 import styles from "./Footer.module.css";
 
 export interface FooterProps {}
@@ -86,22 +82,22 @@ const Footer: React.FC<FooterProps> = () => {
           <ul className={`${styles.list} ${styles.flexList}`}>
             <li>
               <a href="/facebook" className={styles.link}>
-                <img src={facebook} alt="" width={24} height={24} />
+                <img src="/assets/icon-facebook.svg" alt="" width={24} height={24} />
               </a>
             </li>
             <li>
               <a href="/twitter" className={styles.link}>
-                <img src={twitter} alt="" width={24} height={24} />
+                <img src="/assets/icon-twitter.svg" alt="" width={24} height={24} />
               </a>
             </li>
             <li>
               <a href="/pinterest" className={styles.link}>
-                <img src={pinterest} alt="" width={24} height={24} />
+                <img src="/assets/icon-pinterest.svg" alt="" width={24} height={24} />
               </a>
             </li>
             <li>
               <a href="/instagram" className={styles.link}>
-                <img src={instagram} alt="" width={24} height={24} />
+                <img src="/assets/icon-instagram.svg"alt="" width={24} height={24} />
               </a>
             </li>
           </ul>

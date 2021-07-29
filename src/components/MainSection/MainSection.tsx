@@ -25,6 +25,7 @@ const MainSection: React.FC<MainSectionProps> = () => {
     setShortenedLinks(links);
   }, []);
 
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -32,15 +33,16 @@ const MainSection: React.FC<MainSectionProps> = () => {
       const {
         data: { result },
       } = await getUrl(url);
+      // TODO: Remove console.log
       console.log(result);
       const { short_link, original_link } = result;
       const updatedLinks = [
         ...shortenedLinks,
         { short_link, original_link, copied: false },
       ];
-      LocalStorageService.setItem("links", JSON.stringify(updatedLinks));
       setShortenedLinks(updatedLinks);
-      setUrl("");
+      setUrl("");      
+      LocalStorageService.setItem("links", JSON.stringify(updatedLinks));
     } else {
       setError("Please add a valid link");
     }
@@ -48,9 +50,9 @@ const MainSection: React.FC<MainSectionProps> = () => {
 
   const onCopy = async (url: string) => {
     await navigator.clipboard.writeText(url);
-    const shortlink = await navigator.clipboard.readText();
+    const shortLink = await navigator.clipboard.readText();
     const links = shortenedLinks.map((item) => {
-      if (item.short_link === shortlink) item.copied = true;
+      if (item.short_link === shortLink) item.copied = true;
       return item;
     });
     setShortenedLinks(links);
@@ -106,24 +108,20 @@ const MainSection: React.FC<MainSectionProps> = () => {
         <div className={`${styles.cardsContainer}`}>
           <Card
             icon={IconBrandRecognition}
-            title={"Brand Recognition"}
-            body={
-              "Boost your brand recognition with each click. Generic links don't mean a thing. branded links help instil confidence in your content."
-            }
+            title="Brand Recognition"
+            body="Boost your brand recognition with each click. Generic links don't mean a thing. branded links help instil confidence in your content."
+            
           />
           <Card
             icon={IconDetailedRecords}
-            title={"Detailed Records"}
-            body={
-              "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
-            }
+            title="Detailed Records"
+            body="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
+            
           />
           <Card
             icon={IconFullyCustomizable}
-            title={"Fully Customizable"}
-            body={
-              "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement"
-            }
+            title="Fully Customizable"
+            body="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement"
           />
         </div>
       </section>

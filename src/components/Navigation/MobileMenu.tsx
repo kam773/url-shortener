@@ -4,6 +4,8 @@ import logo from "../../assets/logo.svg";
 import styles from "./Navigation.module.css";
 
 const MobileMenu = () => {
+  // TODO: expressive variable naming -> isMobileMenuVisible
+  // boolean values should always start with is or has
   const [show, setShow] = React.useState(false);
   const toggleNav = () => setShow((prev) => !prev);
   return (
